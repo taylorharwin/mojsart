@@ -55,6 +55,7 @@
     $scope.sharedState = {};
     $scope.getSongs();
     $scope.files = {};
+    $scope.sent = false;
     //recognizes when one or more files are selected, loads them to array
     $scope.filesChanged = function(elm){
       $scope.files = elm.files;
@@ -81,7 +82,7 @@
       })
           .success(function (data, status, headers, config) {
           console.log("Sent:", data);
-          $scope.getSongs();
+            $scope.sent = true;
       });
   };
 });
