@@ -8,6 +8,7 @@
     'mojsart.main.infopanel',
     'fx.animations',
     'ngAnimate',
+    'mm.foundation'
   ])
   
   .config(function ($stateProvider) {

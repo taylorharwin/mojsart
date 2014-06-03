@@ -1,5 +1,5 @@
 angular.module('mojsart.main.sidebar', ['ui.router', 'fx.animations',
-    'ngAnimate'])
+    'ngAnimate','mm.foundation'])
 
 .config(function ($stateProvider) {
 
