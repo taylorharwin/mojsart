@@ -16,6 +16,13 @@
       <a ui-sref="mojsart.home" class="large button">Get started</a>
       <a twitter data-lang="en" data-count="horizontal" data-url="http://mojsart.com/" data-size="large" data-text="Check out {{title}}!"></a>
     </div>
+    <div class="large-4 medium-6 columns">
+      <ul rn-carousel class="image slideshow">
+        <li ng-repeat="image in siteImages" style="background-image:url({{ image }});">
+          <div class="layer">{{ image }}</div>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 

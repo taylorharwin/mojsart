@@ -6,7 +6,8 @@
     'fx.animations',
     'ngAnimate',
     'mm.foundation',
-    'mojsart.main.home'
+    'mojsart.main.home',
+    'angular-carousel'
   ])
   
   .config(function ($stateProvider) {
@@ -55,10 +56,17 @@
       });
     };
 
+    $scope.getStaticPhotos = function(){
+      $http.get('/photo')
+      .success(function(json) {
+        $scope.siteImages = json;
+      });
+    };
+
     //Gets all songs, Populates sharedScope songs array with all songs in shared state.
     //Note that this function
-      $scope.fillSongsList = function(data){
-        angular.forEach(data, function(song){
+      $scope.fillSongsList = function(data) {
+        angular.forEach(data, function(song) {
           $scope.sharedState.songs.push({'track': song.echoData.artist, 'title': song.echoData.title, 'echoId': song.echoData.md5});
         });
     };
@@ -72,6 +80,7 @@
     $scope.getSongs($scope.fillSongsList);
     $scope.files = {};
     $scope.sent = false;
+    $scope.siteImages = ['/about/running_demo.jpg', '/about/running_demo1.jpg','/about/running_demo2.jpg'];
 
     //recognizes when one or more files are selected, loads them to array
    

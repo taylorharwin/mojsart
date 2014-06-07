@@ -52,7 +52,7 @@ var ModalInstanceCtrl = function ($scope, $http, $modalInstance, items) {
     item: $scope.items[0]
   };
   //recognizes when one or more files are selected, loads them to array
-  $scope.filesChanged = function(elm){
+  $scope.filesChanged = function(elm) {
       $scope.files = elm.files;
       $scope.$apply();
       console.log($scope.files);

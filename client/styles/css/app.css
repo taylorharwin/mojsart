@@ -171,3 +171,7 @@ footer .row,
 .tutorial .button {
   float: right;
 }
+.slideshow {
+  height: 200px;
+  width: 200px;
+}
