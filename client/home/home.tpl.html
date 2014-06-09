@@ -26,12 +26,12 @@
    </audio>
     <span class="song-info" ng-show="sharedState.comparing">
       {{sharedState.title}} - {{sharedState.artist}}</span>
-      <span class="tutorial" ng-controller="UploadModalCtrl">
-        <button step-text="Mojsart provides a tool for comparing any two songs based on harmonic complexity. Your job is to decide which song has a more complex sound structure. We factor your judgment into our visualizer."
-                step-index="1"
-                step-placement="top"
-                class="button tiny"
-                ng-click="startTour()">
+      <span step-text="Mojsart provides a tool for comparing any two songs based on harmonic complexity. Your job is to decide which song has a more complex sound structure. We factor your judgment into our visualizer."
+            step-index="1"
+            step-placement="top"
+            class="tutorial" 
+            ng-controller="UploadModalCtrl">
+        <button class="button tiny" ng-click="startTour()">
           New to Mojsart? Take a tour
         </button>
       </span>
