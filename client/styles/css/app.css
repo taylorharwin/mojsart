@@ -144,7 +144,7 @@ footer .row,
 .menu span button {
   margin-bottom: 0;
 }
-.menu span .song-info {
+.song-info {
   color: white;
   position: relative;
   top: calc(-10%);
